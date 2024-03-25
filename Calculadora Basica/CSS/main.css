@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap');
+
+:root {
+    --color-principal: #212A3E;
+    --color-secundario: #394867;
+    --gris: #9BA4B5;
+    --claro: #F1F6F9;
+    --blanco: #fff;
+    --negro: #000;
+}
+
+/* globales */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-size: 16px;
+    font-family: 'Fira Sans', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-principal);
+    color: var(--blanco);
+}
+
+/* utilidades */
+.sombra {
+    box-shadow: 10px 10px 29px 0px rgba(0,0,0,0.47);
+}
+
+/* CALCULADORA */
+
+.calculadora {
+    background-color: var(--color-secundario);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    border-radius: 1rem;
+        width: min(90%, 40rem);
+    border: 1px var(--color-principal) solid;
+}
+
+.calculadora__pantalla {
+    grid-column: 1 / 5;
+    text-align: right;
+    background-color: var(--color-principal);
+    padding: 2rem;
+    border-radius: 1rem;
+    font-size: 2.5rem;
+    overflow: hidden;
+}
+
+.calculadora__btn {
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calculadora__btn--cero {
+    grid-column: 1 / 3;
+}
+.calculadora__btn--igual {
+    grid-row: 5 / 7;
+    grid-column: 4 / 5;
+
+    background-color: var(--gris);
+    font-size: 4rem;
+}
+.calculadora__btn:active {
+    transform: scale(.98);
+}
+
+
+
